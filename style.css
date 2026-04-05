@@ -561,6 +561,14 @@ a[href*="mailto"]:hover {
   
 }
 
+
+
+@media (min-width:300px) and (max-width:1000px){
+  #hero-btn{
+    display:none;
+  }
+}
+
 @media screen and (min-width:450px) {
   ::-webkit-scrollbar {
   width: 6px;
