@@ -13,11 +13,12 @@ exports.handler = async (event, context) => {
             return { statusCode: 500, body: JSON.stringify({ error: "API Key missing!" }) };
         }
 
-        const response = await axios.post('https://api.groq.com/openai/v1/chat/completions', {
-            model: "llama-3-8b-8192",
-            messages: messages,
-            temperature: 0.5
-        }, {
+        // استخدم الرابط المختصر اللي عملناه في الـ toml
+const response = await fetch('/api/chat', { 
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ message: userInput })
+});, {
             headers: {
                 'Authorization': `Bearer ${API_KEY}`,
                 'Content-Type': 'application/json'
