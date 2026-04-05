@@ -6,35 +6,36 @@ exports.handler = async (event, context) => {
     }
 
     try {
-        const { message } = JSON.parse(event.body);
-        const apiKey = process.env.AHMED_WALID; 
+        const { messages } = JSON.parse(event.body);
+        const apiKey = process.env.AHMED_WALID;
 
-        const url = "https://api.groq.com/openai/v1/chat/completions";
+        if (!apiKey) {
+            return { statusCode: 500, body: JSON.stringify({ error: "API Key is missing!" }) };
+        }
 
-        const response = await axios.post(url, {
-            model: "llama3-8b-8192", 
-            messages: [
-                { role: "user", content: message }
-            ]
+        const response = await axios.post("https://api.groq.com/openai/v1/chat/completions", {
+            model: "llama3-8b-8192",
+            messages: messages,
+            temperature: 0.7
         }, {
             headers: {
                 'Authorization': `Bearer ${apiKey}`,
                 'Content-Type': 'application/json'
-            }
+            },
+            timeout: 10000 // استنى 10 ثواني قبل ما يفصل
         });
-
-        const botReply = response.data.choices[0].message.content;
 
         return {
             statusCode: 200,
-            body: JSON.stringify({ reply: botReply })
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(response.data) // نبعت الداتا زي ما هي لـ OpenAI format
         };
 
     } catch (error) {
-        console.error("Groq Error:", error.response ? error.response.data : error.message);
+        console.error("LOG:", error.message);
         return {
             statusCode: 500,
-            body: JSON.stringify({ error: "حدث خطأ في الاتصال بـ Groq API" })
+            body: JSON.stringify({ error: error.message })
         };
     }
 };
