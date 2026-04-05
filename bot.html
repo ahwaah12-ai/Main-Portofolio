@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Ahmed Walid AI | العقل الفائق</title>
+    <title>Ahmed Walid AI</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <script src="https://unpkg.com/lucide@latest"></script>
     <link href="https://fonts.googleapis.com/css2?family=Readex+Pro:wght@300;400;700&display=swap" rel="stylesheet">
@@ -191,11 +191,10 @@
     </div>
 
     <script>
-    lucide.createIcons();
-        
-    const GROQ_API_KEY = "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";
+        lucide.createIcons();
+        const GROQ_API_KEY = "       ";
 
-    let chatHistory = [{
+        let chatHistory = [{
             role: "system",
             content: `أنت أحمد وليد، مبرمج Front End Developer و UI/UX Designer عندك 17 سنة من المنيا. طالب في مدرسة WE للتكنولوجيا.
 
@@ -227,7 +226,7 @@
 
         - اهم حاجه تتكلم بالنيابه عني دايما انت احمد وليد نفسو
         
-        - لو حد سأل عن السعر، قوله إن السعر بيعتمد على حجم الشغل (Scope)، واطلب منه تفاصيل البروجيكت الأول عشان تدي له عرض سعر (Proposal) دقيق، بس عرفه إن أسعارك تنافسية مقابل الجودة."
+        - لو حد سأل عن السعر، قوله إن السعر بيعتمد على حجم الشغل (Scope)، واطلب منه تفاصيل البروجيكت الأول عشان تدي له عرض سعر (Proposal) دقيق، بسعرفه إن أسعارك تنافسية مقابل الجودة."
         
         - "لما تتكلم عن البرمجة، ركز دايماً على الـ User Experience. قول للعميل إنك مش بس بتبني كود، أنت بتبني تجربة مريحة للي هيستخدم الموقع عشان يزود مبيعاته."
         
@@ -235,7 +234,7 @@
         
         - لو حد شتمك او اتكلم باسلوب غير لائق قوله واقفل متردش عليه تاني غير لما يتكلم كويس "اسف مش هقدر اكمل في الشات 
 
-        - متقولش مش هنبدا البروجيكت ولا اي علطول
+        - متقولش مش هنبدا البروجيكت ولااي علطول
 
         - متبعتش اي لينكات تواصل غير لما العميل يسالك عليها او قوله لو عاوز تتواصل مع احمد انا اقدر اساعدك ولو وافق ابعته كل لينك في رساله
 
@@ -246,66 +245,76 @@
         - واخيرا اللي صممك هو احمد
         `}];
 
-    async function send() {
-        const input = document.getElementById('in');
-        const userText = input.value.trim();
-        if (!userText) return;
+        async function send() {
+            const input = document.getElementById('in');
+            const userText = input.value.trim();
 
-        addMsg(userText, 'user');
-        chatHistory.push({ role: "user", content: userText });
-        input.value = '';
-        document.getElementById('type').style.display = 'block';
+            if (!userText) return;
 
-        try {
-            // استخدمنا "cors-anywhere" أو بروكزي وسيط عشان نتخطى المنع
-            const response = await fetch("https://api.groq.com/openai/v1/chat/completions", {
-                method: "POST",
-                headers: {
-                    "Authorization": `Bearer ${API_KEY}`,
-                    "Content-Type": "application/json"
-                },
-                body: JSON.stringify({
-                    model: "llama3-8b-8192",
-                    messages: chatHistory,
-                    temperature: 0.7
-                })
-            });
+            addMsg(userText, 'user');
+            chatHistory.push({ role: "user", content: userText });
 
-            if (!response.ok) {
-                const errorData = await response.json();
-                throw new Error(errorData.error.message || "API Error");
+            input.value = '';
+            document.getElementById('type').style.display = 'block';
+
+            if (!GROQ_API_KEY) {
+                document.getElementById('type').style.display = 'none';
+                addMsg(" لم يتم التحقق من الهادم", 'bot');
+                return;
             }
 
-            const data = await response.json();
-            const aiReply = data.choices[0].message.content;
+            try {
+                const response = await fetch("https://api.allorigins.win/get?url=" + encodeURIComponent("https://api.groq.com/openai/v1/chat/completions"), {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify({
+                        headers: {
+                            "Authorization": `Bearer ${GROQ_API_KEY}`,
+                            "Content-Type": "application/json"
+                        },
+                        method: "POST",
+                        body: JSON.stringify({
+                            model: "llama3-8b-8192",
+                            messages: chatHistory,
+                            temperature: 0.7
+                        })
+                    })
+                });
 
-            chatHistory.push({ role: "assistant", content: aiReply });
-            document.getElementById('type').style.display = 'none';
-            addMsg(aiReply, 'bot');
+                const proxyData = await response.json();
+                const data = JSON.parse(proxyData.contents);
 
-        } catch (e) {
-            console.error("Error details:", e);
-            document.getElementById('type').style.display = 'none';
-            addMsg("فيه مشكلة في السيرفر حالياً، جرب كمان شوية يا هندسة ⚠️", 'bot');
+                if (data.error) throw new Error(data.error.message);
+
+                const aiReply = data.choices[0].message.content;
+
+                chatHistory.push({ role: "assistant", content: aiReply });
+                document.getElementById('type').style.display = 'none';
+                addMsg(aiReply, 'bot');
+
+            } catch (e) {
+                console.error("Error details:", e);
+                document.getElementById('type').style.display = 'none';
+                addMsg(" تم ايقاف البوت مؤقتا ❤️", 'bot');
+            }
         }
-    }
 
-    function addMsg(text, type) {
-        const box = document.getElementById('box');
-        const div = document.createElement('div');
-        div.className = `msg ${type}`;
-        div.innerText = text;
-        box.appendChild(div);
-        box.scrollTo({ top: box.scrollHeight, behavior: 'smooth' });
-    }
-
-    document.addEventListener('contextmenu', (e) => e.preventDefault());
-    document.onkeydown = function (e) {
-        if (e.keyCode == 123 || (e.ctrlKey && e.shiftKey && (e.keyCode == 'I'.charCodeAt(0) || e.keyCode == 'C'.charCodeAt(0) || e.keyCode == 'J'.charCodeAt(0))) || (e.ctrlKey && e.keyCode == 'U'.charCodeAt(0))) {
-            return false;
+        function addMsg(text, type) {
+            const box = document.getElementById('box');
+            const div = document.createElement('div');
+            div.className = `msg ${type}`;
+            div.innerText = text;
+            box.appendChild(div);
+            box.scrollTo({
+                top: box.scrollHeight,
+                behavior: 'smooth'
+            });
         }
-    };
-
+        document.getElementById('in').addEventListener('keypress', function (e) {
+            if (e.key === 'Enter') {
+                send();
+            }
+        });
 
         document.addEventListener('contextmenu', (e) => e.preventDefault());
         document.onkeydown = function (e) {
@@ -325,7 +334,7 @@
                 return false;
             }
         };
-</script>
+    </script>
 </body>
 
 </html>
