@@ -506,6 +506,60 @@ a[href*="mailto"]:hover {
   50% { transform: translateY(-20px); }
 }
 
+@media (min-width:769px) and (max-width:1024px){
+  #hero{
+    margin-top: 30px;
+  }
+  #hero-name{
+    font-size: 45px !important;
+  }
+
+  #hero-name ~ p{
+    font-size: 17px;
+  }
+  #hero-greeting{
+    font-size: 10px;
+  }
+  #availabe{
+    font-size: 8px;
+    margin: 0px;
+  }
+  #hero-image {
+    height: 200px;
+    width: 200px;
+    margin: 0px 0px;
+    border-radius: 50px;
+  }
+  
+  #hero-box{
+    transform: rotate(0deg);
+    height: 254px;
+    padding-top: 30px;
+    width: 200px;
+    border-radius: 50px;
+  }
+  #hero-cta{
+    display: none;
+    width: 130px;
+    white-space: nowrap;
+    font-size: 13px;
+  }
+  #hero-title{
+    font-size: 30px;
+    /* display: none; */
+  }
+  .border-2{
+    border: none;
+  }
+  #hero{
+    top: -10px;
+    padding: 10px 0px;
+  }
+  #hero{
+    flex-direction: column-reverse;
+  }
+  
+}
 
 @media screen and (min-width:450px) {
   ::-webkit-scrollbar {
