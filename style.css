@@ -433,7 +433,7 @@ a[href*="mailto"]:hover {
   
   #hero-box{
     transform: rotate(0deg);
-    height: 240px;
+    height: 250px;
     padding-top: 30px;
     width: 200px;
     border-radius: 50px;
