@@ -1,0 +1,861 @@
+<!doctype html>
+<html lang="ar" dir="rtl" class="h-full">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Ahmed Walid , Web Develober , Front End , Back End  , Full Stack , Programer , Develober , Programming Languege , Html , Css , Java Script , Es6 , Cross Browser Compatibility , Portofolio , Modern Portofolio , Web Projects , Personal Website , Bootstrap , Telwind , Responsive , Modern Website , احمد وليد , برمجه , تطوير ويب , Ahmed Walid, أحمد وليد, Web Developer, مبرمج ويب, Front-End Developer, مطور فرونت إند, Back-End Developer, مطور باك إند, Full Stack Developer, مطور فول ستاك, Programming, برمجة, Web Development, تطوير ويب, Responsive Websites, مواقع متجاوبة, Modern Websites, مواقع حديثة, UI/UX Design, تصميم واجهات المستخدم, تجربة مستخدم, User Experience, Digital Experience, مشاريع ويب, Web Projects, Coding, كود نظيف, HTML, CSS, JavaScript, JS, ES6, React, React Learning, Python, بايثون, Flutter, Dart, تطبيقات موبايل, Interactive Design, تصميم تفاعلي, Cross-Browser Compatible, متوافق مع كل المتصفحات, Personal Portfolio, بورتفوليو شخصي, Bootstrap, Telwind, Netlify, Database, قواعد بيانات, Git, GitHub, VS Code, Figma, Node.js, DevTools, تقنيات حديثة, Modern Tech, Web Programming, تعليم البرمجة, Learn Programming, Career in Web Development, مساعدة في مشاريع, Coding Student, طالب برمجة, WE School of Applied Technology, تعليم واجهات المستخدم, Web Application Development, تصميم المواقع الحديثة, Modern UI, Mobile Friendly, واجهات متجاوبة, Creative Web Design, حلول برمجية مبتكرة, Innovative Coding, Problem Solving, حلول برمجية, Tech Enthusiast, مهتم بالتكنولوجيا">
+  <title>Ahmed Walid | Full Stack Developer</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="Black Yellow Brush Streetwear Brand Logo.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800;900&amp;family=Readex+Pro:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+  <script src="/_sdk/element_sdk.js"></script>
+  <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+  <script src="/_sdk/data_sdk.js" type="text/javascript"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lucide@0.263.0/dist/umd/lucide.min.js"></script>
+</head>
+<body class="h-full">
+  <div id="app-root" class="h-full w-full overflow-auto" style="background: #0a0a0a; color: #e8e8e8;">
+    <nav id="main-nav" class="fixed top-0 left-0 right-0 z-50 transition-all duration-500"
+      style="background: rgba(10,10,10,0.85); backdrop-filter: blur(20px); border-bottom: 1px solid rgba(255,255,255,0.05);">
+      <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+        <div class="flex items-center gap-3">
+          <div class="w-10 h-10 rounded-circle flex items-center justify-center text-lg font-bold"
+            style="background: linear-gradient(135deg, #f59e0b, #d97706); color: #0a0a0a;"><img
+              src="Black Yellow Brush Streetwear Brand Logo.png" alt="photo" class="rounded-circle">
+          </div><span id="nav-name" class="text-lg font-bold" style="color: #f59e0b;"></span>
+          <div>
+            <a href="bot.html"><i class="fa-brands fa-bots"></i></a>
+          </div>
+        </div>
+        <div class="hidden md:flex items-center gap-8"><a href="#hero" class="nav-link text-sm"
+            style="color: #a0a0a0;">Home <i class="fa-regular fa-house"></i></a> <a href="#about"
+            class="nav-link text-sm" style="color: #a0a0a0;">About <i class="fa-solid fa-circle-question"></i></a> <a
+            href="#services" class="nav-link text-sm" style="color: #a0a0a0;">Services <i
+              class="fa-solid fa-chalkboard-user"></i></a> <a href="#portfolio" class="nav-link text-sm"
+            style="color: #a0a0a0;">My Project <i class="fa-solid fa-chart-gantt"></i></a> <a href="#reviews"
+            class="nav-link text-sm" style="color: #a0a0a0;">Coments <i class="fa-solid fa-comment"></i></a> <a
+            href="#contact" class="nav-link text-sm" style="color: #a0a0a0;">Contact <i
+              class="fa-solid fa-address-card"></i></a>
+        </div><button id="mobile-menu-btn" class="md:hidden p-2" style="color: #e8e8e8;"> <i data-lucide="menu"
+            style="width:24px;height:24px;"></i> </button>
+      </div>
+      <div id="mobile-menu" class="hidden md:hidden px-6 pb-4 flex flex-col gap-3"><a href="#hero" class="text-sm py-2"
+          style="color: #a0a0a0;">Home</a> <a href="#about" class="text-sm py-2" style="color: #a0a0a0;">About</a> <a
+          href="#services" class="text-sm py-2" style="color: #a0a0a0;">Services</a> <a href="#portfolio"
+          class="text-sm py-2" style="color: #a0a0a0;">My Project</a> <a href="#reviews" class="text-sm py-2"
+          style="color: #a0a0a0;">Coments</a> <a href="#contact" class="text-sm py-2"
+          style="color: #a0a0a0;">Contact</a>
+      </div>
+    </nav>
+    <section id="hero" class="grad-hero relative min-h-screen flex items-center justify-center overflow-hidden pt-16 md:pt-0">
+      <div class="hidden md:block absolute inset-0 pointer-events-none">
+        <div class="particle w-1 h-1 bg-amber-500 top-[20%] right-[15%]" style="animation-delay:0s;"></div>
+        <div class="particle w-1 h-1 bg-amber-500 top-[40%] right-[75%]" style="animation-delay:2s;"></div>
+        <div class="particle w-1.5 h-1.5 bg-amber-500 top-[60%] right-[85%]" style="animation-delay:4s;"></div>
+        <div class="particle w-1 h-1 bg-amber-600 top-[30%] right-[50%]" style="animation-delay:1s;"></div>
+      </div>
+
+      <div class="max-w-7xl mx-auto px-6 w-full py-10 md:py-20">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 md:gap-16 items-center">
+          <div class="order-2 lg:order-1 text-center lg:text-left">
+            <div class="flex items-center justify-center lg:justify-start gap-2 mb-6">
+              <div id="available"
+                class="flex items-center gap-2 px-4 py-2 bg-amber-500/10 border border-amber-500/20 rounded-full animate-pulse-shadow">
+                <span class="w-2 h-2 rounded-full bg-amber-500"></span>
+                <span class="text-[10px] md:text-xs tracking-widest uppercase font-black text-amber-500">
+                  Available To Work
+                </span>
+              </div>
+            </div>
+
+            <h1 id="hero-greeting" class="text-sm md:text-lg mb-2 text-gray-400 font-light tracking-wide">
+              Welcome 👋, I'm
+            </h1>
+
+            <h2 id="hero-name" class="text-[2.5rem] leading-[1.1] sm:text-6xl md:text-7xl lg:text-8xl font-black mb-6 text-white tracking-tighter">
+              <span class="text-blue-500">Ahmed</span> Walid
+            </h2>
+
+            <div class="glow-line w-full max-w-[300px] mx-auto lg:mx-0 mb-6"></div>
+
+            <h3 id="hero-title" class="text-xl md:text-3xl font-bold mb-6 min-h-[1.5em] text-amber-500">
+            </h3>
+
+            <p id="hero-subtitle"
+              class="text-sm md:text-lg leading-relaxed mb-10 max-w-lg mx-auto lg:mx-0 text-gray-400 font-light">
+              Student At <span class="text-white">WE School</span> Of Applied Technology. Crafting digital experiences.
+            </p>
+
+            <div class="flex flex-col sm:flex-row justify-center lg:justify-center gap-4">
+              <a href="#contact"
+                class="cta-btn inline-flex items-center justify-center gap-2 px-8 py-4 rounded-2xl font-black text-sm transition-all hover:scale-105 bg-gradient-to-r from-amber-500 to-amber-600 text-black shadow-xl shadow-amber-500/20">
+                <span>Start Project</span>
+                <i data-lucide="send" class="w-6 h-4"></i>
+              </a>
+            </div>
+          </div>
+
+          <div class="order-1 lg:order-2 flex justify-center">
+            <div class="relative float-anim">
+              <div class="absolute -inset-4 rounded-full border border-amber-500/10 animate-ping"></div>
+              <div class="absolute -inset-8 rounded-full border border-blue-500/5 animate-pulse"></div>
+
+              <div id="hero-box"
+                class="w-44 h-44 sm:w-64 sm:h-64 lg:w-96 lg:h-96 rounded-[3rem] rotate-3 overflow-hidden border-2 border-white/10 shadow-2xl hover:rotate-0 duration-500">
+                <img id="hero-image" src="WhatsApp Image 2026-01-31 at 11.32.07 PM.jpeg" alt="Ahmed Walid"
+                  class="w-full h-full object-cover scale-110">
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 mt-20">
+          <div
+            class="glass-card rounded-[2rem] p-6 text-center border border-white/5 hover:border-amber-500/20 transition-all">
+            <div class="counter text-3xl md:text-5xl font-black mb-1 text-amber-500 tracking-tighter" data-target="100">
+              0</div>
+            <div class="text-[10px] md:text-xs uppercase font-bold text-gray-500 tracking-widest">Projects</div>
+          </div>
+          <div
+            class="glass-card rounded-[2rem] p-6 text-center border border-white/5 hover:border-amber-500/20 transition-all">
+            <div class="counter text-3xl md:text-5xl font-black mb-1 text-amber-500 tracking-tighter" data-target="30">0
+            </div>
+            <div class="text-[10px] md:text-xs uppercase font-bold text-gray-500 tracking-widest">Happy Clients %</div>
+          </div>
+          <div
+            class="glass-card rounded-[2rem] p-6 text-center border border-white/5 hover:border-amber-500/20 transition-all">
+            <div class="counter text-3xl md:text-5xl font-black mb-1 text-amber-500 tracking-tighter" data-target="5">0
+            </div>
+            <div class="text-[10px] md:text-xs uppercase font-bold text-gray-500 tracking-widest">Experience +</div>
+          </div>
+          <div
+            class="glass-card rounded-[2rem] p-6 text-center border border-white/5 hover:border-amber-500/20 transition-all">
+            <div class="counter text-3xl md:text-5xl font-black mb-1 text-amber-500 tracking-tighter" data-target="4">0
+            </div>
+            <div class="text-[10px] md:text-xs uppercase font-bold text-gray-500 tracking-widest">Evaluation ★</div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="about" class="py-24 px-6 fade-in" style="background: #0d0d0d;">
+      <div class="max-w-7xl mx-auto">
+        <div class="text-center mb-16"><span class="text-sm tracking-wider" style="color: #f59e0b;">Start
+            Project</span><br>
+          <h2 class="section-heading text-4xl md:text-5xl font-black mt-3" style="color: #e8e8e8;">About</h2>
+        </div>
+        <div class="grid md:grid-cols-2 gap-12 items-start">
+          <div>
+            <p id="about-text" class="text-lg leading-loose mb-8" style="color: #a0a0a0;">My name is <span
+                style="color: #f59e0b; font-weight: bolder;">Ahmed Walid, a 17-year-old</span> Junior Front-End
+              Developer from Minya. I am currently a student at WE School of Applied Technology and learning UI/UX
+              design. I specialize in programming and web development, focusing on building modern, responsive, and
+              user-friendly websites. Programming is not just writing code for me; it is about solving real problems
+              creatively and turning ideas into digital experiences. I always aim to write clean, efficient, and
+              maintainable code that is built to last.</p>
+            <div class="grid grid-cols-2 gap-4">
+              <div class="glass-card rounded-xl p-4 flex items-center gap-3"><i data-lucide="map-pin"
+                  style="width:18px;height:18px;color:#f59e0b;"></i> <span class="text-sm"
+                  style="color: #a0a0a0;">Egypt, Minya, Samalout</span>
+              </div>
+              <div class="glass-card rounded-xl p-4 flex items-center gap-3"><i data-lucide="clock"
+                  style="width:18px;height:18px;color:#f59e0b;"></i> <span class="text-sm" style="color: #a0a0a0;">Full
+                  Time</span>
+              </div>
+              <div class="glass-card rounded-xl p-4 flex items-center gap-3"><i data-lucide="zap"
+                  style="width:18px;height:18px;color:#f59e0b;"></i> <span class="text-sm" style="color: #a0a0a0;">Fast
+                  Delivery</span>
+              </div>
+              <div class="glass-card rounded-xl p-4 flex items-center gap-3"><i data-lucide="shield-check"
+                  style="width:18px;height:18px;color:#f59e0b;"></i> <span class="text-sm"
+                  style="color: #a0a0a0;">Quality Assurance</span>
+              </div>
+            </div>
+          </div>
+          <div>
+            <h3 class="text-xl font-bold mb-6" style="color: #e8e8e8;">Skills Used</h3>
+            <div class="space-y-5" id="skills-container">
+              <div>
+                <div class="flex justify-between mb-2">
+                  <span class="text-sm font-medium" style="color:#e8e8e8;">HTML / CSS </span><span class="text-sm"
+                    style="color:#f59e0b;">98%</span>
+                </div>
+                <div class="h-2 rounded-full" style="background: rgba(255,255,255,0.08);">
+                  <div class="skill-bar-fill h-full rounded-full"
+                    style="width:0%;background:linear-gradient(90deg,#f59e0b,#d97706);" data-width="98"></div>
+                </div>
+              </div>
+              <div>
+                <div class="flex justify-between mb-2">
+                  <span class="text-sm font-medium" style="color:#e8e8e8;">Responsive Design</span><span class="text-sm"
+                    style="color:#f59e0b;">96%</span>
+                </div>
+                <div class="h-2 rounded-full" style="background: rgba(255,255,255,0.08);">
+                  <div class="skill-bar-fill h-full rounded-full"
+                    style="width:0%;background:linear-gradient(90deg,#f59e0b,#d97706);" data-width="96"></div>
+                </div>
+              </div>
+              <div>
+                <div class="flex justify-between mb-2">
+                  <span class="text-sm font-medium" style="color:#e8e8e8;">Bootstrap / Tailwind</span><span
+                    class="text-sm" style="color:#f59e0b;">95%</span>
+                </div>
+                <div class="h-2 rounded-full" style="background: rgba(255,255,255,0.08);">
+                  <div class="skill-bar-fill h-full rounded-full"
+                    style="width:0%;background:linear-gradient(90deg,#f59e0b,#d97706);" data-width="95"></div>
+                </div>
+              </div>
+              <div>
+                <div class="flex justify-between mb-2">
+                  <span class="text-sm font-medium" style="color:#e8e8e8;">JavaScript / TypeScript</span><span
+                    class="text-sm" style="color:#f59e0b;">90%</span>
+                </div>
+                <div class="h-2 rounded-full" style="background: rgba(255,255,255,0.08);">
+                  <div class="skill-bar-fill h-full rounded-full"
+                    style="width:0%;background:linear-gradient(90deg,#f59e0b,#d97706);" data-width="90"></div>
+                </div>
+              </div>
+              <div>
+                <div class="flex justify-between mb-2">
+                  <span class="text-sm font-medium" style="color:#e8e8e8;">React / Next.js</span><span class="text-sm"
+                    style="color:#f59e0b;">88%</span>
+                </div>
+                <div class="h-2 rounded-full" style="background: rgba(255,255,255,0.08);">
+                  <div class="skill-bar-fill h-full rounded-full"
+                    style="width:0%;background:linear-gradient(90deg,#f59e0b,#d97706);" data-width="88"></div>
+                </div>
+              </div>
+              <div>
+                <div class="flex justify-between mb-2">
+                  <span class="text-sm font-medium" style="color:#e8e8e8;">Node.js / Express</span><span class="text-sm"
+                    style="color:#f59e0b;">85%</span>
+                </div>
+                <div class="h-2 rounded-full" style="background: rgba(255,255,255,0.08);">
+                  <div class="skill-bar-fill h-full rounded-full"
+                    style="width:0%;background:linear-gradient(90deg,#f59e0b,#d97706);" data-width="85"></div>
+                </div>
+              </div>
+              <div>
+                <div class="flex justify-between mb-2">
+                  <span class="text-sm font-medium" style="color:#e8e8e8;">UI/UX Design</span><span class="text-sm"
+                    style="color:#f59e0b;">80%</span>
+                </div>
+                <div class="h-2 rounded-full" style="background: rgba(255,255,255,0.08);">
+                  <div class="skill-bar-fill h-full rounded-full"
+                    style="width:0%;background:linear-gradient(90deg,#f59e0b,#d97706);" data-width="80"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <br><br>
+      <section id="services" class="py-24 px-6 fade-in rounded-xl" style="background: #0a0a0a;">
+        <div class="max-w-7xl mx-auto">
+          <div class="text-center mb-16">
+            <span class="text-sm tracking-wider" style="color: #f59e0b;">WHAT I OFFER</span>
+            <h2 class="section-heading text-4xl md:text-5xl font-black mt-3" style="color: #e8e8e8;">Our Services</h2>
+          </div>
+          <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div class="service-card glass-card rounded-2xl p-8">
+              <div class="w-14 h-14 rounded-xl flex items-center justify-center mb-6"
+                style="background: rgba(245,158,11,0.1);">
+                <i data-lucide="layout" style="width:28px;height:28px;color:#f59e0b;"></i>
+              </div>
+              <h3 id="service1-title" class="text-xl font-bold mb-3" style="color: #e8e8e8;">Web Development</h3>
+              <p class="text-sm leading-relaxed" style="color: #a0a0a0;">Professional, responsive websites with modern
+                design and high performance across all devices.</p>
+              <div class="mt-6 flex items-center gap-2 text-sm font-medium" style="color: #f59e0b;">
+                <span>Learn More</span> <i data-lucide="arrow-right" style="width:14px;height:14px;"></i>
+              </div>
+            </div>
+
+            <div class="service-card glass-card rounded-2xl p-8">
+              <div class="w-14 h-14 rounded-xl flex items-center justify-center mb-6"
+                style="background: rgba(245,158,11,0.1);">
+                <i data-lucide="smartphone" style="width:28px;height:28px;color:#f59e0b;"></i>
+              </div>
+              <h3 id="service2-title" class="text-xl font-bold mb-3" style="color: #e8e8e8;">Web Applications</h3>
+              <p class="text-sm leading-relaxed" style="color: #a0a0a0;">Interactive, full-stack web applications built
+                with modern technologies like React and Node.js.</p>
+              <div class="mt-6 flex items-center gap-2 text-sm font-medium" style="color: #f59e0b;">
+                <span>Learn More</span> <i data-lucide="arrow-right" style="width:14px;height:14px;"></i>
+              </div>
+            </div>
+
+            <div class="service-card glass-card rounded-2xl p-8">
+              <div class="w-14 h-14 rounded-xl flex items-center justify-center mb-6"
+                style="background: rgba(245,158,11,0.1);">
+                <i data-lucide="palette" style="width:28px;height:28px;color:#f59e0b;"></i>
+              </div>
+              <h3 id="service3-title" class="text-xl font-bold mb-3" style="color: #e8e8e8;">UI/UX Design</h3>
+              <p class="text-sm leading-relaxed" style="color: #a0a0a0;">Creating stunning user interfaces and seamless
+                user experiences that stand out.</p>
+              <div class="mt-6 flex items-center gap-2 text-sm font-medium" style="color: #f59e0b;">
+                <span>Learn More</span> <i data-lucide="arrow-right" style="width:14px;height:14px;"></i>
+              </div>
+            </div>
+
+            <div class="service-card glass-card rounded-2xl p-8">
+              <div class="w-14 h-14 rounded-xl flex items-center justify-center mb-6"
+                style="background: rgba(245,158,11,0.1);">
+                <i data-lucide="shopping-cart" style="width:28px;height:28px;color:#f59e0b;"></i>
+              </div>
+              <h3 id="service4-title" class="text-xl font-bold mb-3" style="color: #e8e8e8;">E-Commerce</h3>
+              <p class="text-sm leading-relaxed" style="color: #a0a0a0;">Building complete online stores with integrated
+                payment systems and inventory management.</p>
+              <div class="mt-6 flex items-center gap-2 text-sm font-medium" style="color: #f59e0b;">
+                <span>Learn More</span> <i data-lucide="arrow-right" style="width:14px;height:14px;"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="py-24 px-6 fade-in" style="background: #0d0d0d;">
+        <div class="max-w-4xl mx-auto">
+          <div class="text-center mb-16"><span class="text-sm tracking-wider" style="color: #f59e0b;">HOW I WORK</span>
+            <h2 class="section-heading text-4xl md:text-5xl font-black mt-3" style="color: #e8e8e8;">Work Process</h2>
+          </div>
+          <div class="relative pr-12">
+            <div class="timeline-line"></div>
+            <div class="space-y-12">
+              <div class="relative">
+                <div class="timeline-dot" style="top: 8px;"></div>
+                <div class="glass-card rounded-2xl p-6 mr-8">
+                  <div class="flex items-center gap-1 mb-3"><span class="px-3 py-1 rounded-full text-xs font-bold"
+                      style="background: rgba(245,158,11,0.15); color: #f59e0b;">01</span>
+                    <h3 class="text-lg sm:text-md font-bold" style="color: #e8e8e8;white-space: nowrap; padding: 5px;">Listen & Analyze</h3>
+                  </div>
+                  <p class="text-sm" style="color: #a0a0a0;">I listen carefully to your requirements and analyze the
+                    project needs to create a clear action plan.</p>
+                </div>
+              </div>
+              <div class="relative">
+                <div class="timeline-dot" style="top: 8px;"></div>
+                <div class="glass-card rounded-2xl p-6 mr-8">
+                  <div class="flex items-center gap-3 mb-3"><span class="px-3 py-1 rounded-full text-xs font-bold"
+                      style="background: rgba(245,158,11,0.15); color: #f59e0b;">02</span>
+                    <h3 class="text-lg font-bold" style="color: #e8e8e8;">Design & Prototyping</h3>
+                  </div>
+                  <p class="text-sm" style="color: #a0a0a0;">I design interactive prototypes to get your approval before
+                    starting the development phase.</p>
+                </div>
+              </div>
+              <div class="relative">
+                <div class="timeline-dot" style="top: 8px;"></div>
+                <div class="glass-card rounded-2xl p-6 mr-8">
+                  <div class="flex items-center gap-3 mb-3"><span class="px-3 py-1 rounded-full text-xs font-bold"
+                      style="background: rgba(245,158,11,0.15); color: #f59e0b;">03</span>
+                    <h3 class="text-lg font-bold" style="color: #e8e8e8;">Development & Coding</h3>
+                  </div>
+                  <p class="text-sm" style="color: #a0a0a0;">I start the development using the latest technologies with
+                    continuous updates to track progress.</p>
+                </div>
+              </div>
+              <div class="relative">
+                <div class="timeline-dot" style="top: 8px;"></div>
+                <div class="glass-card rounded-2xl p-6 mr-8">
+                  <div class="flex items-center gap-3 mb-3"><span class="px-3 py-1 rounded-full text-xs font-bold"
+                      style="background: rgba(245,158,11,0.15); color: #f59e0b;">04</span>
+                    <h3 class="text-lg font-bold" style="color: #e8e8e8;">Delivery & Support</h3>
+                  </div>
+                  <p class="text-sm" style="color: #a0a0a0;">Project delivery after thorough testing, including one
+                    month of free technical support.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </section>
+    <section id="portfolio" class="py-24 px-6 fade-in" style="background: #0a0a0a;">
+      <div class="max-w-7xl mx-auto">
+        <div class="text-center mb-16"><span class="text-sm tracking-wider" style="color: #f59e0b;">My Project</span>
+          <h2 class="section-heading text-4xl md:text-5xl font-black mt-3" style="color: #e8e8e8;">Gellery</h2>
+        </div>
+        <div class="flex justify-center gap-3 mb-12 flex-wrap" id="portfolio-filters"><button
+            class="filter-btn active px-5 py-2 rounded-full text-sm font-medium transition-all" data-filter="all"
+            style="background: #f59e0b; color: #0a0a0a;">All</button> <button
+            class="filter-btn px-5 py-2 rounded-full text-sm font-medium transition-all glass-card" data-filter="web"
+            style="color: #a0a0a0;">Website</button> <button
+            class="filter-btn px-5 py-2 rounded-full text-sm font-medium transition-all glass-card" data-filter="design"
+            style="color: #a0a0a0;">Design</button>
+        </div>
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6" id="portfolio-grid">
+          <div class="project-card glass-card rounded-2xl overflow-hidden" data-category="web">
+            <div class="h-48 relative" style="background: linear-gradient(135deg, #1e3a5f, #0d1b2a);">
+              <div class="absolute inset-0 flex items-center justify-center text-5xl">
+                <img src="Screenshot 2026-03-09 105842.png" alt="">
+              </div>
+              <div
+                class="project-overlay absolute inset-0 flex items-center justify-center gap-4 opacity-0 transition-opacity"
+                style="background: rgba(0,0,0,0.7);"><button
+                  class="w-10 h-10 rounded-full flex items-center justify-center"
+                  style="background: #f59e0b; color: #0a0a0a;"><i data-lucide="eye"
+                    style="width:18px;height:18px;"></i></button>
+              </div>
+            </div>
+            <div class="p-6">
+              <div class="flex items-center gap-2 mb-2"><span class="px-2 py-1 rounded text-xs"
+                  style="background: rgba(245,158,11,0.1); color: #f59e0b;">Website</span>
+              </div>
+              <h3 class="text-lg font-bold" style="color: #e8e8e8;">منصه اتصالات</h3>
+              <!-- <p class="text-sm" style="color: #a0a0a0;">متجر بتصميم عصري وسلة مشتريات ونظام دفع.</p> -->
+            </div>
+            <hr>
+            <br>
+            <a href="https://comuni-com.vercel.app"
+              style="text-align: center;width: 100%;text-decoration: none;color: rgb(255, 255, 255);font-family: Georgia, 'Times New Roman', Times, serif;font-weight: 600;padding: 15px;margin: 10px auto;">Live
+              Demo <i class="fa-solid fa-person-walking-arrow-right"></i></a>
+            <br>
+          </div>
+
+          <!-- <div class="project-card glass-card rounded-2xl overflow-hidden" data-category="app">
+       <div class="h-48 relative" style="background: linear-gradient(135deg, #2d1b69, #1a0a3e);">
+        <div class="absolute inset-0 flex items-center justify-center text-5xl">
+          📊
+        </div>
+        <div class="project-overlay absolute inset-0 flex items-center justify-center gap-4 opacity-0 transition-opacity" style="background: rgba(0,0,0,0.7);"><button class="w-10 h-10 rounded-full flex items-center justify-center" style="background: #f59e0b; color: #0a0a0a;"><i data-lucide="eye" style="width:18px;height:18px;"></i></button>
+        </div>
+       </div>
+       <div class="p-6">
+        <div class="flex items-center gap-2 mb-2"><span class="px-2 py-1 rounded text-xs" style="background: rgba(245,158,11,0.1); color: #f59e0b;">تطبيق</span>
+        </div>
+        <h3 class="text-lg font-bold mb-2" style="color: #e8e8e8;">لوحة تحكم إدارية</h3>
+        <p class="text-sm" style="color: #a0a0a0;">داشبورد متقدمة لإدارة البيانات والتقارير.</p>
+       </div>
+      </div> -->
+
+          <div class="project-card glass-card rounded-2xl overflow-hidden" data-category="web">
+            <div class="h-48 relative" style="background: linear-gradient(135deg, #1a4d2e, #0a2615);">
+              <div class="absolute inset-0 flex items-center justify-center text-5xl">
+                <img src="Screenshot 2026-03-29 003500.png" alt="">
+              </div>
+              <div
+                class="project-overlay absolute inset-0 flex items-center justify-center gap-4 opacity-0 transition-opacity"
+                style="background: rgba(0,0,0,0.7);"><button
+                  class="w-10 h-10 rounded-full flex items-center justify-center"
+                  style="background: #f59e0b; color: #0a0a0a;"><i data-lucide="eye"
+                    style="width:18px;height:18px;"></i></button>
+              </div>
+            </div>
+            <div class="p-6">
+              <div class="flex items-center gap-2 mb-2"><span class="px-2 py-1 rounded text-xs"
+                  style="background: rgba(245,158,11,0.1); color: #f59e0b;">Website</span>
+              </div>
+              <h3 class="text-lg font-bold mb-2" style="color: #e8e8e8;">مستقبل
+                البرمجيات</h3>
+              <br>
+              <hr>
+              <br>
+              <a href="https://luminapro-rust.vercel.app"
+                style="text-align: center;width: 100%;text-decoration: none;color: rgb(255, 255, 255);font-family: Georgia, 'Times New Roman', Times, serif;font-weight: 600;padding: 15px;margin: 10px auto;">Live
+                Demo <i class="fa-solid fa-person-walking-arrow-right"></i></a>
+              <br>
+            </div>
+          </div>
+          <div class="project-card glass-card rounded-2xl overflow-hidden" data-category="web">
+            <div class="h-48 relative" style="background: linear-gradient(135deg, #5c1a1a, #2e0a0a);">
+              <div class="absolute inset-0 flex items-center justify-center text-5xl">
+                <img src="phonozone.png" alt="">
+              </div>
+              <div
+                class="project-overlay absolute inset-0 flex items-center justify-center gap-4 opacity-0 transition-opacity"
+                style="background: rgba(0,0,0,0.7);"><button
+                  class="w-10 h-10 rounded-full flex items-center justify-center"
+                  style="background: #f59e0b; color: #0a0a0a;"><i data-lucide="eye"
+                    style="width:18px;height:18px;"></i></button>
+              </div>
+            </div>
+            <div class="p-6">
+              <div class="flex items-center gap-2 mb-2"><span class="px-2 py-1 rounded text-xs"
+                  style="background: rgba(245,158,11,0.1); color: #f59e0b;">Website</span>
+              </div>
+              <h3 class="text-lg font-bold mb-2" style="color: #e8e8e8;">تكنولوجيا
+                بلا حدود</h3>
+              <br>
+              <hr>
+              <br>
+              <a href="https://phonezon.vercel.app"
+                style="text-align: center;width: 100%;text-decoration: none;color: rgb(255, 255, 255);font-family: Georgia, 'Times New Roman', Times, serif;font-weight: 600;padding: 15px;margin: 10px auto;">Live
+                Demo <i class="fa-solid fa-person-walking-arrow-right"></i></a>
+              <br>
+            </div>
+          </div>
+          <div class="project-card glass-card rounded-2xl overflow-hidden" data-category="design">
+            <div class="h-48 relative" style="background: linear-gradient(135deg, #4a3f1a, #2e2610);">
+              <div class="absolute inset-0 flex items-center justify-center text-5xl">
+                <img src="Screenshot 2026-03-29 203551.png" alt="design">
+              </div>
+              <div
+                class="project-overlay absolute inset-0 flex items-center justify-center gap-4 opacity-0 transition-opacity"
+                style="background: rgba(0,0,0,0.7);"><button
+                  class="w-10 h-10 rounded-full flex items-center justify-center"
+                  style="background: #f59e0b; color: #0a0a0a;"><i data-lucide="eye"
+                    style="width:18px;height:18px;"></i></button>
+              </div>
+            </div>
+            <div class="p-6">
+              <div class="flex items-center gap-2 mb-2"><span class="px-2 py-1 rounded text-xs"
+                  style="background: rgba(245,158,11,0.1); color: #f59e0b;">Design</span>
+              </div>
+              <h3 class="text-lg font-bold mb-2" style="color: #e8e8e8;"> تصميم </h3>
+              <br>
+              <hr>
+              <br>
+              <a href="#"
+                style="text-align: center;width: 100%;text-decoration: none;color: rgb(255, 255, 255);font-family: Georgia, 'Times New Roman', Times, serif;font-weight: 600;padding: 15px;margin: 10px auto;">Live
+                Demo <i class="fa-solid fa-person-walking-arrow-right"></i></a>
+              <br>
+            </div>
+          </div>
+          <div class="project-card glass-card rounded-2xl overflow-hidden" data-category="web">
+            <div class="h-48 relative" style="background: linear-gradient(135deg, #1a3d5c, #0a1e2e);">
+              <div class="absolute inset-0 flex items-center justify-center text-5xl">
+                <img src="mobile photo.png" alt="web">
+              </div>
+              <div
+                class="project-overlay absolute inset-0 flex items-center justify-center gap-4 opacity-0 transition-opacity"
+                style="background: rgba(0,0,0,0.7);"><button
+                  class="w-10 h-10 rounded-full flex items-center justify-center"
+                  style="background: #f59e0b; color: #0a0a0a;"><i data-lucide="eye"
+                    style="width:18px;height:18px;"></i></button>
+              </div>
+            </div>
+            <div class="p-6">
+              <div class="flex items-center gap-2 mb-2"><span class="px-2 py-1 rounded text-xs"
+                  style="background: rgba(245,158,11,0.1); color: #f59e0b;">Website</span>
+              </div>
+              <h3 class="text-lg font-bold mb-2" style="color: #e8e8e8;">
+                متجر الهواتف</h3>
+              <br>
+              <hr>
+              <br>
+              <a href="https://mible-phone.vercel.app/"
+                style="text-align: center;width: 100%;text-decoration: none;color: rgb(255, 255, 255);font-family: Georgia, 'Times New Roman', Times, serif;font-weight: 600;padding: 15px;margin: 10px auto;">Live
+                Demo <i class="fa-solid fa-person-walking-arrow-right"></i></a>
+              <br>
+            </div>
+          </div>
+          <div class="project-card glass-card rounded-2xl overflow-hidden" data-category="design">
+            <div class="h-48 relative" style="background: linear-gradient(135deg, #1a3d5c, #0a1e2e);">
+              <div class="absolute inset-0 flex items-center justify-center text-5xl">
+                <img src="apexxy photo.png" alt="design">
+              </div>
+              <div
+                class="project-overlay absolute inset-0 flex items-center justify-center gap-4 opacity-0 transition-opacity"
+                style="background: rgba(0,0,0,0.7);"><button
+                  class="w-10 h-10 rounded-full flex items-center justify-center"
+                  style="background: #f59e0b; color: #0a0a0a;"><i data-lucide="eye"
+                    style="width:18px;height:18px;"></i></button>
+              </div>
+            </div>
+            <div class="p-6">
+              <div class="flex items-center gap-2 mb-2"><span class="px-2 py-1 rounded text-xs"
+                  style="background: rgba(245,158,11,0.1); color: #f59e0b;">design</span>
+              </div>
+              <h3 class="text-lg font-bold mb-2" style="color: #e8e8e8;">
+                تصميم لهواتف</h3>
+              <br>
+              <hr>
+              <br>
+              <a href=""
+                style="text-align: center;width: 100%;text-decoration: none;color: rgb(255, 255, 255);font-family: Georgia, 'Times New Roman', Times, serif;font-weight: 600;padding: 15px;margin: 10px auto;">Live
+                Demo <i class="fa-solid fa-person-walking-arrow-right"></i></a>
+              <br>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="py-12 overflow-hidden"
+      style="background: #0d0d0d; border-top: 1px solid rgba(255,255,255,0.05); border-bottom: 1px solid rgba(255,255,255,0.05);">
+      <div class="marquee-track" style="color: #a0a0a0;"><span
+          class="text-lg font-medium whitespace-nowrap">React.js</span> <span style="color: #f59e0b;">●</span> <span
+          class="text-lg font-medium whitespace-nowrap">Next.js</span> <span style="color: #f59e0b;">●</span> <span
+          class="text-lg font-medium whitespace-nowrap">Node.js</span> <span style="color: #f59e0b;">●</span> <span
+          class="text-lg font-medium whitespace-nowrap">TypeScript</span> <span style="color: #f59e0b;">●</span> <span
+          class="text-lg font-medium whitespace-nowrap">Tailwind CSS</span> <span style="color: #f59e0b;">●</span> <span
+          class="text-lg font-medium whitespace-nowrap">MongoDB</span> <span style="color: #f59e0b;">●</span> <span
+          class="text-lg font-medium whitespace-nowrap">PostgreSQL</span> <span style="color: #f59e0b;">●</span> <span
+          class="text-lg font-medium whitespace-nowrap">Figma</span> <span style="color: #f59e0b;">●</span> <span
+          class="text-lg font-medium whitespace-nowrap">React.js</span> <span style="color: #f59e0b;">●</span> <span
+          class="text-lg font-medium whitespace-nowrap">Next.js</span> <span style="color: #f59e0b;">●</span> <span
+          class="text-lg font-medium whitespace-nowrap">Node.js</span> <span style="color: #f59e0b;">●</span> <span
+          class="text-lg font-medium whitespace-nowrap">TypeScript</span> <span style="color: #f59e0b;">●</span> <span
+          class="text-lg font-medium whitespace-nowrap">Tailwind CSS</span> <span style="color: #f59e0b;">●</span> <span
+          class="text-lg font-medium whitespace-nowrap">MongoDB</span> <span style="color: #f59e0b;">●</span> <span
+          class="text-lg font-medium whitespace-nowrap">PostgreSQL</span> <span style="color: #f59e0b;">●</span> <span
+          class="text-lg font-medium whitespace-nowrap">Figma</span> <span style="color: #f59e0b;">●</span>
+      </div>
+
+      <section id="reviews" class="py-24 px-6 fade-in" style="background: #0a0a0a;">
+        <div class="max-w-7xl mx-auto">
+          <div class="text-center mb-16">
+            <span class="text-sm tracking-wider" style="color: #f59e0b;">CUSTOMER REVIEWS</span>
+            <h2 class="section-heading text-4xl md:text-5xl font-black mt-3" style="color: #e8e8e8;">Testimonials</h2>
+          </div>
+
+          <div class="grid md:grid-cols-3 gap-6">
+            <div class="review-card glass-card rounded-2xl p-8">
+              <div class="flex items-center gap-1 mb-4">
+                <span style="color: #f59e0b;">★★★★★</span>
+              </div>
+              <p class="text-sm leading-relaxed mb-6" style="color: #a0a0a0;">"Excellent professional work and delivery
+                before the deadline. The communication was very professional and I highly recommend working with him."
+              </p>
+              <div class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-full flex items-center justify-center text-lg font-bold"
+                  style="background: linear-gradient(135deg, #f59e0b, #d97706); color: #0a0a0a;">
+                  A
+                </div>
+                <div>
+                  <div class="text-sm font-bold" style="color: #e8e8e8;">Ahmed Al-Shammari</div>
+                  <div class="text-xs" style="color: #a0a0a0;">E-commerce Store Owner</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="review-card glass-card rounded-2xl p-8">
+              <div class="flex items-center gap-1 mb-4">
+                <span style="color: #f59e0b;">★★★★★</span>
+              </div>
+              <p class="text-sm leading-relaxed mb-6" style="color: #a0a0a0;">"A professional in his field who
+                understands requirements from the first time. The result exceeded my expectations and the site works
+                perfectly."</p>
+              <div class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-full flex items-center justify-center text-lg font-bold"
+                  style="background: linear-gradient(135deg, #f59e0b, #d97706); color: #0a0a0a;">
+                  S
+                </div>
+                <div>
+                  <div class="text-sm font-bold" style="color: #e8e8e8;">Sarah Al-Otaibi</div>
+                  <div class="text-xs" style="color: #a0a0a0;">Startup Manager</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="review-card glass-card rounded-2xl p-8">
+              <div class="flex items-center gap-1 mb-4">
+                <span style="color: #f59e0b;">★★★★★</span>
+              </div>
+              <p class="text-sm leading-relaxed mb-6" style="color: #a0a0a0;">"High commitment to deadlines and
+                exceptional quality. I have worked with him on 3 projects and all were successfully completed with
+                excellence."</p>
+              <div class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-full flex items-center justify-center text-lg font-bold"
+                  style="background: linear-gradient(135deg, #f59e0b, #d97706); color: #0a0a0a;">
+                  K
+                </div>
+                <div>
+                  <div class="text-sm font-bold" style="color: #e8e8e8;">Khaled Al-Malki</div>
+                  <div class="text-xs" style="color: #a0a0a0;">Entrepreneur</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+    </section>
+    <section class="py-24 px-6 fade-in" style="background: #0d0d0d;">
+      <div class="max-w-3xl mx-auto">
+        <div class="text-center mb-16">
+          <span class="text-sm tracking-wider" style="color: #f59e0b;">COMMON QUESTIONS</span>
+          <h2 class="section-heading text-4xl md:text-5xl font-black mt-3" style="color: #e8e8e8;">Frequently Asked
+            Questions</h2>
+        </div>
+        <div class="space-y-4" id="faq-container">
+          <div class="faq-item glass-card rounded-xl overflow-hidden">
+            <button class="faq-toggle w-full p-6 flex items-center justify-between text-right" onclick="toggleFaq(this)">
+              <span class="font-bold" style="color: #e8e8e8;">How long does project execution take ?</span>
+              <i data-lucide="chevron-down" style="width:20px;height:20px;color:#f59e0b;transition:transform 0.3s;"></i>
+            </button>
+            <div class="faq-content px-6 pb-0 overflow-hidden"
+              style="max-height:0;transition:max-height 0.4s ease,padding 0.4s;">
+              <p class="text-sm leading-relaxed pb-6" style="color: #a0a0a0;">It depends on the project size and
+                complexity. Simple projects take 3-7 days, medium projects from two weeks to a month, and large projects
+                from one to three months. </p>
+            </div>
+          </div>
+          <div class="faq-item glass-card rounded-xl overflow-hidden">
+            <button class="faq-toggle w-full p-6 flex items-center justify-between text-right" onclick="toggleFaq(this)">
+              <span class="font-bold" style="color: #e8e8e8;">Do you provide technical support after delivery? </span>
+              
+              <i data-lucide="chevron-down" style="width:20px;height:20px;color:#f59e0b;transition:transform 0.3s;"></i>
+            </button>
+            <div class="faq-content px-6 pb-0 overflow-hidden"
+              style="max-height:0;transition:max-height 0.4s ease,padding 0.4s;">
+              <p class="text-sm leading-relaxed pb-6" style="color: #a0a0a0;">Yes, I provide free technical support for
+                one month after project delivery. This includes fixing any issues and making minor adjustments.</p>
+            </div>
+          </div>
+          <div class="faq-item glass-card rounded-xl overflow-hidden">
+            <button class="faq-toggle w-full p-6 flex items-center justify-between text-right" onclick="toggleFaq(this)">
+              <span class="font-bold" style="color: #e8e8e8;">What are the available payment methods?</span>
+              <i data-lucide="chevron-down" style="width:20px;height:20px;color:#f59e0b;transition:transform 0.3s;"></i>
+            </button>
+            <div class="faq-content px-6 pb-0 overflow-hidden"
+              style="max-height:0;transition:max-height 0.4s ease,padding 0.4s;">
+              <p class="text-sm leading-relaxed pb-6" style="color: #a0a0a0;">I work through freelance platforms that
+                provide full protection for both parties. Payments are handled securely through the platform.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="contact" class="py-24 px-6 fade-in" style="background: #0a0a0a;">
+      <div class="max-w-4xl mx-auto">
+        <div class="text-center mb-16">
+          <span class="text-sm tracking-wider" style="color: #f59e0b;"> WORK TOGETHER</span> <br>
+          <h2 class="section-heading text-4xl md:text-5xl font-black mt-3" style="color: #e8e8e8;">Contact Me</h2>
+          <p class="mt-6 text-lg" style="color: #a0a0a0;">Have a project idea? Send me the details and I'll get back to
+            you within 24 hours.</p>
+        </div>
+        <div class="glass-card rounded-3xl p-8 md:p-12">
+          <form id="contact-form" class="space-y-6">
+            <p id="not_full" class="w-100" style="color: red;font-weight: bolder;"></p>
+            <div class="grid md:grid-cols-2 gap-6">
+              <div>
+                <label for="cf-name" class="block text-sm font-medium mb-2" style="color: #e8e8e8;">Name</label>
+                <input type="text" id="cf-name" placeholder="Your Name"
+                  class="w-full px-5 py-4 rounded-xl text-sm outline-none transition-all focus:ring-2"
+                  style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); color: #e8e8e8;"
+                  required>
+              </div>
+              <div>
+                <label for="cf-email" class="block text-sm font-medium mb-2" style="color: #e8e8e8;">Email
+                  Address</label>
+                <input type="email" id="cf-email" placeholder="email@example.com"
+                  class="w-full px-5 py-4 rounded-xl text-sm outline-none transition-all focus:ring-2"
+                  style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); color: #e8e8e8;"
+                  required>
+              </div>
+            </div>
+
+
+            <div class="grid md:grid-cols-2 gap-6">
+             <div>
+              <label for="cf-subject" class="block text-sm font-medium mb-2" style="color: #e8e8e8;">Project
+                Type</label>
+              <select id="cf-subject"
+                class="w-full px-5 py-4 rounded-xl text-sm outline-none transition-all focus:ring-2"
+                style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); color: #a0a0a0;">
+                <option value="">Select project type</option>
+                <option value="Website">Website</option>
+                <option value="Landing Page">Landing Page</option>
+                <option value="Web Application">Web Application</option>
+                <option value="UI/UX Design">UI/UX Design</option>
+                <option value="Other">Other</option>
+              </select>
+            </div>
+
+            <div>
+              <label for="cf-budget" class="block text-sm font-medium mb-2" style="color: #e8e8e8;">Approximate
+                Budget</label>
+              <select id="cf-budget"
+                class="w-full px-5 py-4 rounded-xl text-sm outline-none transition-all focus:ring-2"
+                style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); color: #a0a0a0;">
+                <option value="">Select budget</option>
+                <option value="$500 - $1000">$500 - $1000</option>
+                <option value="$1000 - $3000">$1000 - $3000</option>
+                <option value="$3000 - $5000">$3000 - $5000</option>
+                <option value="More than $5000">More than $5000</option>
+              </select>
+            </div>
+            </div>
+            <div>
+              <label for="cf-phone" class="block text-sm font-medium mb-2" style="color: #e8e8e8;">Phone Number</label>
+              <input type="number" id="cf-phone" placeholder="Your Number"
+                class="w-full px-5 py-4 rounded-xl text-sm outline-none transition-all focus:ring-2"
+                style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); color: #e8e8e8;"
+                required>
+            </div>
+            <div>
+              <label for="cf-message" class="block text-sm font-medium mb-2" style="color: #e8e8e8;">Project
+                Details</label>
+              <textarea id="cf-message" rows="5" placeholder="Write your project details here..."
+                class="w-full px-5 py-4 rounded-xl text-sm outline-none transition-all focus:ring-2 resize-none"
+                style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); color: #e8e8e8;"
+                required></textarea>
+            </div>
+            <button type="submit" id="submit-btn"
+              class="cta-btn w-full py-4 rounded-xl font-bold text-lg flex items-center justify-center gap-2"
+              style="background: linear-gradient(135deg, #f59e0b, #d97706); color: #0a0a0a;">
+              <span>Send Message</span>
+            </button>
+          </form>
+          <div id="form-alert" style="margin-top:10px; color:white;"></div>
+          <div id="status-msg" class="mt-4 text-center text-white"></div>
+          <div id="form-success" class="hidden text-center py-8">
+            <div class="text-5xl mb-4">🎉</div>
+            <h3 class="text-2xl font-bold mb-2" style="color: #e8e8e8;">Sent Successfully!</h3>
+            <p style="color: #a0a0a0;">Thank you for reaching out, I will get back to you soon.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <button id="backToTop"
+      style="position: fixed; bottom: 50px; right: 10px; width:60px; height:60px; border-radius:50%; border:none; background:#f59e0b; color:#000; font-size:22px; cursor:pointer; z-index:999; opacity:0; pointer-events:none; transition:0.3s;">
+      ↑
+    </button>
+    </section>
+    <footer class="py-12 px-6" style="background: #050505; border-top: 1px solid rgba(255,255,255,0.05);">
+      <div class="max-w-7xl mx-auto">
+
+        <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+
+          <div class="flex items-center gap-3">
+            <div class="w-8 h-8 rounded-lg flex items-center justify-center text-sm font-bold"
+              style="background: linear-gradient(135deg, #f59e0b, #d97706); color: #0a0a0a;">
+              A
+            </div>
+            <span class="font-bold" style="color: #f59e0b;">
+              Made With 🍵 By Ahmed Walid
+            </span>
+          </div>
+
+          <div class="flex items-center gap-4">
+            <a href="https://www.facebook.com/share/1CqfLDfoFZ/" target="_blank"
+              class="w-10 h-10 rounded-full flex items-center justify-center glass-card transition-all hover:scale-110"
+              style="color: #a0a0a0;">
+              <i data-lucide="facebook" style="width:18px;height:18px;"></i>
+            </a>
+            <a href="https://www.instagram.com/ahmedwalid_96" target="_blank"
+              class="w-10 h-10 rounded-full flex items-center justify-center glass-card transition-all hover:scale-110"
+              style="color: #a0a0a0;">
+              <i data-lucide="instagram" style="width:18px;height:18px;"></i>
+            </a>
+            <a href="https://wa.me/201023046551" target="_blank"
+              class="w-10 h-10 rounded-full flex items-center justify-center glass-card transition-all hover:scale-110"
+              style="color: #a0a0a0;">
+              <i data-lucide="message-circle" style="width:18px;height:18px;"></i>
+            </a>
+            <a href="https://t.me/AhmedWalid94" target="_blank"
+              class="w-10 h-10 rounded-full flex items-center justify-center glass-card transition-all hover:scale-110"
+              style="color: #a0a0a0;">
+              <i data-lucide="send" style="width:18px;height:18px;"></i>
+            </a>
+            <a href="mailto:ah.wa.ah12@gmail.com"
+              class="w-10 h-10 rounded-full flex items-center justify-center glass-card transition-all hover:scale-110"
+              style="color: #a0a0a0;">
+              <i data-lucide="mail" style="width:18px;height:18px;"></i>
+            </a>
+
+          </div>
+
+          <div class="text-sm text-white fw-bolder">
+            © 2026 All Rights Receved
+          </div>
+
+        </div>
+      </div>
+    </footer>
+  </div>
+  <script defer src="/_vercel/insights/script.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>
