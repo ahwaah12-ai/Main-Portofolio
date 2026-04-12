@@ -1,45 +1,35 @@
 const textElement = document.getElementById('hero-title');
-const words = ["Full Stack Developer", "Web Developer", "Front-End Developer", "UI/UX Designer", "Freelancer"];
+const words = ["Full Stack Developer", "Web Developer", "Front-End Developer", "Back-End Developber" , "UI/UX Designer", "Freelancer"];
 let wordIndex = 0;
 let charIndex = 0;
 let isDeleting = false;
 let typeSpeed = 100;
-
 function type() {
   const currentWord = words[wordIndex];
-
   if (isDeleting) {
     textElement.textContent = currentWord.substring(0, charIndex - 1);
     charIndex--;
     typeSpeed = 50;
   } else {
-
     textElement.textContent = currentWord.substring(0, charIndex + 1);
     charIndex++;
     typeSpeed = 150;
   }
-
   if (!isDeleting && charIndex === currentWord.length) {
     isDeleting = true;
     typeSpeed = 2000;
   }
-
   else if (isDeleting && charIndex === 0) {
     isDeleting = false;
     wordIndex = (wordIndex + 1) % words.length;
     typeSpeed = 500;
   }
-
   setTimeout(type, typeSpeed);
 }
 
-
 document.addEventListener('DOMContentLoaded', type);
-
 function onConfigChange(config) {
   const c = { ...defaultConfig, ...config };
-
-
   const heroName = document.getElementById('hero-name');
   if (heroName) heroName.textContent = c.hero_name;
   const navName = document.getElementById('nav-name');
@@ -60,20 +50,15 @@ function onConfigChange(config) {
   if (s4) s4.textContent = c.service4_title;
   const ctaBtn = document.getElementById('hero-cta');
   if (ctaBtn) ctaBtn.querySelector('span').textContent = c.cta_text;
-
   document.getElementById('app-root').style.background = c.background_color;
   document.getElementById('app-root').style.color = c.text_color;
-
   document.querySelectorAll('[style*="color: #f59e0b"], [style*="color:#f59e0b"]').forEach(el => {
     if (el.style.color === 'rgb(245, 158, 11)' || el.style.color === '#f59e0b') {
       el.style.color = c.accent_color;
     }
   });
-
-
   const fontStack = `${c.font_family}, Arial, sans-serif`;
   document.body.style.fontFamily = fontStack;
-
   const base = c.font_size;
   document.querySelectorAll('h2.section-heading, #hero-name').forEach(el => {
     el.style.fontSize = `${base * 3}px`;
@@ -248,6 +233,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   });
 });
 
+
 const appRoot = document.getElementById('app-root');
 appRoot.addEventListener('scroll', () => {
   const scrollY = appRoot.scrollTop + 100;
@@ -268,34 +254,27 @@ appRoot.addEventListener('scroll', () => {
   });
 });
 
+
 setTimeout(animateCounters, 500);
 lucide.createIcons();
-
 window.addEventListener("DOMContentLoaded", function () {
 
-  const btn = document.getElementById("backToTop");
+  const btn = document.getElementById("open-icons");
   const container = document.getElementById("app-root");
-
   if (!btn || !container) {
     console.log("❌ Element not found");
     return;
   }
-
   container.addEventListener("scroll", function () {
-    if (container.scrollTop > 200) {
+    if (container.scrollTop > 400) {
       btn.style.opacity = "1";
       btn.style.pointerEvents = "auto";
+      btn.style.display = "block"
     } else {
       btn.style.opacity = "0";
+      btn.style.display =  "none"
       btn.style.pointerEvents = "none";
     }
-  });
-
-  btn.addEventListener("click", function () {
-    container.scrollTo({
-      top: 0,
-      behavior: "smooth"
-    });
   });
 
 });
@@ -327,6 +306,16 @@ form.addEventListener('submit', function(e) {
 
   window.location.href = `mailto:ah.wa.ah12@gmail.com?subject=New Project Inquiry&body=${body}`;
 });
+
+
+const btntop = document.getElementById("ToTop")
+btntop.addEventListener("click", function() {
+    container.scrollTo({
+      preventDefault,
+      top: 0,
+      behavior: "smooth"
+    });
+  });
 
 
 document.addEventListener('contextmenu', (e) => e.preventDefault());
