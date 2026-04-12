@@ -371,7 +371,7 @@ a[href*="mailto"]:hover {
   padding: 8px;
   border-radius: 50%;
   transition: all 0.2s ease-in-out;
-  background: black;
+  /* background: black; */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -385,7 +385,7 @@ a[href*="mailto"]:hover {
 
 #open-icons :hover  {
   display: block;
-  background-color: red !important;
+  /* background-color: red !important; */
   opacity: 0.8;
   cursor: pointer;
   box-shadow: 0 0 20px red;
