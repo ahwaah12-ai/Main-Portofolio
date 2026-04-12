@@ -369,7 +369,6 @@ a[href*="mailto"]:hover {
   right: 14px;
   bottom: 40px;
   padding: 8px;
-  display: flex;
   border-radius: 50%;
   transition: all 0.2s ease-in-out;
   background: black;
@@ -436,10 +435,10 @@ a[href*="mailto"]:hover {
 #ToTop{
   position: absolute;
   opacity: 0;
+  display: none;
   z-index: -1;
   transition: all 0.5s ease-in-out;
   bottom: -45px;
-  display: none;
   cursor: pointer;
   right: 80px;
   padding: 5px 5px;
