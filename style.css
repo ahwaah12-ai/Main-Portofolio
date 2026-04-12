@@ -384,13 +384,9 @@ a[href*="mailto"]:hover {
 }
 
 #open-icons :hover  {
-  display: block;
-  /* background-color: red !important; */
   opacity: 0.8;
   cursor: pointer;
-  box-shadow: 0 0 20px red;
   color: white !important; 
-  /* transform: rotate(42deg); */
   right: 14px;
   bottom: 40px;
   padding: 8px;
