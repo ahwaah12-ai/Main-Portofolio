@@ -369,9 +369,13 @@ a[href*="mailto"]:hover {
   right: 14px;
   bottom: 40px;
   padding: 8px;
+  display: flex;
   border-radius: 50%;
   transition: all 0.2s ease-in-out;
   background: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 #open-result{
@@ -387,7 +391,10 @@ a[href*="mailto"]:hover {
   cursor: pointer;
   box-shadow: 0 0 20px red;
   color: white !important; 
-  transform: rotate(42deg);
+  /* transform: rotate(42deg); */
+  right: 14px;
+  bottom: 40px;
+  padding: 8px;
 }
 
 #open-result {
@@ -426,18 +433,20 @@ a[href*="mailto"]:hover {
   cursor: zoom-in;
 }
 
-/* #ToTop{
+#ToTop{
   position: absolute;
-  opacity: 0; 
+  opacity: 0;
+  z-index: -1;
   transition: all 0.5s ease-in-out;
   bottom: -45px;
+  display: none;
   cursor: pointer;
   right: 80px;
   padding: 5px 5px;
   border-radius: 50%;
   transform: rotate(-135deg);
   background-color: rgba(0, 0, 0, 0.473);
-} */
+}
 
 
 #form-icons #open-result .icon-title[class*="facebook"] {
