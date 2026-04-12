@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  user-select: none;
 }
 
 html, body {
@@ -233,27 +234,7 @@ html, body {
   animation: particleDrift 8s ease-in-out infinite;
 }
 
-/* @keyframes particleDrift {
-  0%, 100% {
-    transform: translate(0, 0) scale(1);
-    opacity: 0.3;
-  }
 
-  25% {
-    transform: translate(30px, -40px) scale(1.2);
-    opacity: 0.6;
-  }
-
-  50% {
-    transform: translate(-20px, -80px) scale(0.8);
-    opacity: 0.2;
-  }
-
-  75% {
-    transform: translate(40px, -30px) scale(1.1);
-    opacity: 0.5;
-  }
-} */
 
 .counter {
   font-variant-numeric: tabular-nums;
@@ -360,35 +341,19 @@ a[href*="mailto"]:hover {
   color: #f59e0b !important;
 }
 
+/* Show Icons */
 
-#backToTop {
-  background: rgba(255, 255, 255, 0.05);
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(255,255,255,0.1);
-  transition: all 0.4s ease;
-}
-
-
-#backToTop.show {
-  opacity: 1;
+#open-icons.show {
+  opacity: 0;
   pointer-events: auto;
   transform: translateY(0);
 }
 
-
-#backToTop:hover {
-  box-shadow:
-    0 0 15px rgba(245,158,11,0.6),
-    0 0 30px rgba(245,158,11,0.4),
-    0 0 60px rgba(245,158,11,0.2);
-}
-
-#backToTop::before {
+#open-icons::before {
   content: "";
   position: absolute;
   inset: 0;
   border-radius: 50%;
-  background: linear-gradient(135deg, #f59e0b, #ffb347);
   opacity: 0;
   transition: 0.4s;
   z-index: -1;
@@ -399,10 +364,115 @@ a[href*="mailto"]:hover {
   filter: blur(10px);
 }
 
+#open-icons span{
+  position: absolute;
+  right: 14px;
+  bottom: 40px;
+  padding: 8px;
+  border-radius: 50%;
+  transition: all 0.2s ease-in-out;
+  background: black;
+}
+
+#open-result{
+  position: absolute;
+  right: 10px;
+  bottom: 90px;
+}
+
+#open-icons :hover  {
+  display: block;
+  background-color: red !important;
+  opacity: 0.8;
+  cursor: pointer;
+  box-shadow: 0 0 20px red;
+  color: white !important; 
+  transform: rotate(42deg);
+}
+
+#open-result {
+  position: absolute;
+  /* overflow: hidden; */
+  right: 10px;
+  transform: translateX(150px) !important;
+  bottom: 85px;
+  transition: all 1.9s ease-in;
+}
+
+#open-icons:hover + #open-result {
+  background-color: lch(100% 0.01 296.81 / 0);
+  transform: translateX(10px) !important;
+  bottom: 85px;
+  border-radius: 10px;
+  padding: 0px 10px 0px 10px;
+}
+
+#open-result:hover{
+  transform: translateX(10px) !important;
+  padding: 0px 10px 0px 10px;
+}
+
+#form-icons #open-result .icon-title{
+  transition: all 0.3s ease-in-out;
+  transform: rotate(-10deg);
+  font-weight: 900;
+  font-size: 14px;
+  outline: 1px solid currentColor;
+  padding-top: 3px;
+  background-color: rgba(255, 255, 255, 0.1);
+  overflow-x: hidden;
+  border-radius: 50px;
+  z-index: 1;
+  cursor: zoom-in;
+}
+
+#ToTop{
+  position: absolute;
+  /* opacity: 0; */
+  transition: all 0.5s ease-in-out;
+  bottom: -45px;
+  cursor: pointer;
+  right: 80px;
+  padding: 5px 5px;
+  border-radius: 50%;
+  transform: rotate(-135deg);
+  background-color: rgba(0, 0, 0, 0.473);
+}
+
+
+#form-icons #open-result .icon-title[class*="facebook"] {
+  color: #1877f2 !important;
+}
+
+#form-icons #open-result .icon-title[class*="Instgram"] {
+  color: #e1306c !important;
+}
+
+#form-icons #open-result .icon-title[class*="WhatsApp"] {
+  color: #25d366 !important;
+}
+
+#form-icons #open-result .icon-title[class*="Telegram"] {
+  color: #0088cc !important;
+}
+
+#form-icons #open-result .icon-title[class*="mail"] {
+  color: #f59e0b !important;
+}
+
+a[href*="facebook"]:hover , 
+a[href*="instagram"]:hover ,
+a[href*="wa.me"]:hover , 
+a[href*="t.me"]:hover ,
+a[href*="mailto"]:hover + #form-icons #open-result .icon-title{
+  visibility: visible;
+}
+
+/* End */
+
 #hero{
   padding-top: 23px;
 }
-
 
 @media screen and (max-width:700px) {
   #hero-name{
@@ -428,7 +498,7 @@ a[href*="mailto"]:hover {
   
   #hero-box{
     transform: rotate(0deg);
-    height: 254px;
+    height: 250px;
     padding-top: 30px;
     width: 200px;
     border-radius: 50px;
@@ -486,12 +556,6 @@ a[href*="mailto"]:hover {
   }
 }
 
-@media screen and (max-width:768px) {
-  #hero{
-    flex-direction: row;
-  }
-}
-
 .float-anim {
   animation: float 6s ease-in-out infinite;
 }
@@ -499,6 +563,28 @@ a[href*="mailto"]:hover {
 @keyframes float {
   0%, 100% { transform: translateY(0); }
   50% { transform: translateY(-20px); }
+}
+
+
+@media screen and (min-width:450px) {
+  ::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0a0a0a;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #f59e0b;
+  border-radius: 3px;
+}
+}
+
+@media (min-width:300px) and (max-width:1000px){
+  #hero-btn{
+    display:none;
+  }
 }
 
 @media (min-width:769px) and (max-width:1024px){
@@ -554,27 +640,4 @@ a[href*="mailto"]:hover {
     flex-direction: column-reverse;
   }
   
-}
-
-
-
-@media (min-width:300px) and (max-width:1000px){
-  #hero-btn{
-    display:none;
-  }
-}
-
-@media screen and (min-width:450px) {
-  ::-webkit-scrollbar {
-  width: 6px;
-}
-
-::-webkit-scrollbar-track {
-  background: #0a0a0a;
-}
-
-::-webkit-scrollbar-thumb {
-  background: #f59e0b;
-  border-radius: 3px;
-}
 }
